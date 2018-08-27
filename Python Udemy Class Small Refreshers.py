@@ -38,3 +38,67 @@ print(startDates)
 #startDates[1] = 1902  THIS WILL GIVE AN ERROR.
 #the only way to "change" a tuple: "del"  del(startDates)
 
+
+#dictionaries. collection of key/value pairs.
+warNames = {"WWI": 1914, "WWII": 1939, "Korea": 1951}
+print(warNames)
+print(warNames["WWII"])  #1939
+
+#update value:
+warNames["Korea"] = 1950
+print(warNames["Korea"])  #1950
+
+print(warNames.keys())
+print(warNames.values())
+
+#copy:
+copyOfWarNames = warNames.copy()
+del warNames["Korea"]
+#warNames.clear  ERASES THE WHOLE DIC
+
+
+#conditional statement syntax (in addition to ==. see below.).  Madness!
+fruit = "apple"
+if fruit is "apple" or fruit is "orange":
+    print("yummy!")
+
+
+#you can run python programs from the command terminal by going to the folder then
+# "py name-of-program.py"
+
+print("Enter a number:")
+number = int(input())
+if number % 3 is 0:
+    print("Your number is a multiple of 3.")
+    if number % 7 == 0:
+        print("and a multiple of 7.")
+    else:
+        print("but not 7.")
+
+#two ways of for looping:
+for student in classRoster:
+    print(student)
+
+for digit in range(5,13):
+    print(digit) #prints 5-12
+
+start = 3
+stop = 10
+for digit in range(start, stop):
+    print(digit) #prints 3-9
+    
+#simple loop and nested if/else
+collectionOfBooks = ["Dune", "Neuromancer", "Rebecca"]
+print("Enter the name of the book:")
+bookToBeChecked = input()
+for book in collectionOfBooks:
+    if book == bookToBeChecked:
+        print("Yes I have that book.")
+        break
+else:
+    print("I do not have that book.")
+#careful about putting that else statement outside the for loop
+#otherwise the else will print multiple times if you don't have the book
+#or if it's not the first book
+
+
